@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, inlitial-scale=1">
+  <title>DGS SCHOOL</title>
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <!-- Custom CSS -->
+   <style>
+  /* HERO SECTION */
+
+.hero-image {
+  position: relative;
+  height: 70vh;
+  
+  background:
+    linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url("course_4.jpg") center/cover no-repeat;
+  
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  
+  color: white;
+  overflow: hidden;
+}
+/* HERO TEXT */
+
+.hero-content{
+animation:fadeUp 1.5s ease;
+max-width:700px;
+}
+
+/* BUTTON */
+
+.hero-btn{
+margin-top:20px;
+padding:12px 30px;
+font-size:18px;
+border-radius:30px;
+transition:0.3s;
+}
+
+.hero-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* HERO ANIMATION */
+
+@keyframes fadeUp {
+  from {
+  opacity: 0;
+  transform: translateY(40px);
+}
+
+to {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+}
+/* COURSE CARD MODERN */
+
+.card {
+  border: none;
+  border-radius: 15px;
+  overflow: hidden;
+  transition: 0.4s;
+  position: relative;
+}
+/* COURSE CARD MODERN */
+
+.card {
+  border: none;
+  border-radius: 15px;
+  overflow: hidden;
+  transition: 0.4s;
+  position: relative;
+}
+/* 3D Hover Animation */
+
+.card:hover {
+  transform: translateY(-12px) scale(1.03);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.25);
+}
+/* Price Badge */
+
+.price-badge {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background: #0d6efd;
+  color: white;
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-weight: bold;
+  font-size: 14px;
+}
+/* Rating Stars */
+
+.rating{
+color:#ffc107;
+font-size:14px;
+margin-bottom:6px;
+}
+
+/* Student Count */
+
+.students{
+font-size:13px;
+color:#666;
+margin-bottom:10px;
+}
+
+   </style>
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="container">
+    <a class="navbar-brand d-flex align-items-center" href="#">
+  <img src="dgs3.svg" alt="DGS Logo" height="60">
+  <span class="ms-2 fw-bold">DIL BER Secondary School</span>
+</a>
+<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="courses.html">courses</a></li>
+        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+        <li> <button id="darkModeToggle" class="btn btn-outline-light ms-auto">
+    🌙 Dark Mode
+  </button>
+        </li>
+      </ul>
+    </div>
+  
+  </div>
+</nav>
+
+<!-- Hero Section -->
+<section class="hero-image">
+
+<div class="hero-content">
+<h1 class="display-4 fw-bold">Explore Our Courses</h1>
+
+<p class="lead">
+Learn Web Development, Graphic Design and Digital Marketing
+with professional instructors.
+</p>
+
+<a href="#courses" class="btn btn-primary btn-lg hero-btn">
+Start Learning
+</a>
+</div>
+</section>
+
+<!-- Course Cards -->
+<div class="container my-5">
+  <div class="row g-4">
+
+    <!-- Card 1 -->
+   <div class="col-md-4">
+<div class="card">
+
+<span class="price-badge">$300</span>
+
+<img src="web.png" class="card-img-top">
+
+<div class="card-body">
+
+<h5 class="card-title">Web Development</h5>
+
+<div class="rating">
+<i class="fa fa-star"></i>
+<i class="fa fa-star"></i>
+<i class="fa fa-star"></i>
+<i class="fa fa-star"></i>
+<i class="fa fa-star-half-alt"></i>
+<span>(4.5)</span>
+</div>
+
+<div class="students">
+🎓 520 Students Enrolled
+</div>
+
+<p class="card-text">
+Learn HTML, CSS, Bootstrap and JavaScript.
+</p>
+
+<a class="btn btn-primary enrollBtn"
+data-course="Web Development"
+data-link="Wdd.html"
+data-bs-toggle="modal"
+data-bs-target="#enrollModal">
+Enroll Now
+</a>
+
+</div>
+</div>
+</div>
+
+
+    <!-- Card 2 -->
+   <div class="col-md-4">
+<div class="card">
+
+<span class="price-badge">$250</span>
+
+<img src="graphic.png" class="card-img-top">
+
+<div class="card-body">
+
+<h5 class="card-title">Graphic Design</h5>
+
+<div class="rating">
+<i class="fa fa-star"></i>
+<i class="fa fa-star"></i>
+<i class="fa fa-star"></i>
+<i class="fa fa-star"></i>
+<i class="fa fa-star"></i>
+<span>(5.0)</span>
+</div>
+
+<div class="students">
+🎓 430 Students Enrolled
+</div>
+
+<p class="card-text">
+Master Photoshop, Illustrator and UI Design.
+</p>
+
+<a class="btn btn-success enrollBtn"
+data-course="Graphic Design"
+data-link="graphic.html"
+data-bs-toggle="modal"
+data-bs-target="#enrollModal">
+Enroll Now
+</a>
+
+</div>
+</div>
+</div>
+
+
+    <!-- Card 3 -->
+ <div class="col-md-4">
+<div class="card">
+
+<span class="price-badge">$280</span>
+
+<img src="digital.png" class="card-img-top">
+
+<div class="card-body">
+
+<h5 class="card-title">Digital Marketing</h5>
+
+<div class="rating">
+<i class="fa fa-star"></i>
+<i class="fa fa-star"></i>
+<i class="fa fa-star"></i>
+<i class="fa fa-star-half-alt"></i>
+<i class="fa fa-star"></i>
+<span>(4.2)</span>
+</div>
+
+<div class="students">
+🎓 390 Students Enrolled
+</div>
+
+<p class="card-text">
+SEO, Social Media and Content Marketing.
+</p>
+
+<a class="btn btn-warning enrollBtn"
+data-course="Digital Marketing"
+data-link="digital.html"
+data-bs-toggle="modal"
+data-bs-target="#enrollModal">
+Enroll Now
+</a>
+
+</div>
+</div>
+</div>
+<!-- Responsive Table -->
+<div class="container my-5">
+  <h2 class="text-center mb-4">Course Schedule</h2>
+
+  <div class="table-responsive">
+    <table class="table table-bordered table-striped">
+      <thead class="table-dark">
+        <tr>
+          <th>Course</th>
+          <th>Duration</th>
+          <th>Instructor</th>
+          <th>Fees</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Web Development</td>
+          <td>3 Months</td>
+          <td>Mr. John</td>
+          <td>$300</td>
+        </tr>
+        <tr>
+          <td>Graphic Design</td>
+          <td>2 Months</td>
+          <td>Ms. Sarah</td>
+          <td>$250</td>
+        </tr>
+        <tr>
+          <td>Digital Marketing</td>
+          <td>2.5 Months</td>
+          <td>Mr. Alex</td>
+          <td>$280</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="enrollModal" tabindex="-1">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header bg-primary text-white">
+        <h5 class="modal-title">Enrollment Form</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body">
+     <form id="enrollForm">
+  <input type="hidden" id="selectedCourse" name="course">
+
+  <div class="mb-3">
+    <label class="form-label">Full Name</label>
+    <input type="text" class="form-control" name="fullName" required>
+  </div>
+
+  <div class="mb-3">
+    <label class="form-label">Email</label>
+    <input type="email" class="form-control" name="email" required>
+  </div>
+
+  <button type="submit" class="btn btn-success w-100">
+    Submit
+  </button>
+</form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- FOOTER Start -->
+<div class="container-fluid bg-dark text-light footrer pt-5  mt-5 wow fadeIn" data-wow-delay="0.1s">
+  <div class="container py-5">
+    <div class="row g-5">
+      <div class="col-lg-3 col-md-6">
+        <h4 class="text-white mb-3">Quick Link</h4>
+        <a class="btn btn-link" href="">Privacy policy</a>
+        <a class="btn btn-link" href="about.html">About</a>
+        <a class="btn btn-link" href="courses.html">courses</a>
+        <a class="btn btn-link" href="contact.html">contact</a>
+        <a class="btn btn-link" href="">FAQs & Helps</a>
+      </div>
+      <div class="col-lg-3 col-md-6">
+        <h4 class="text-white mb-3">Contact</h4>
+        <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>123 stress, New york, USA</p>
+        <p class="mb-2"><i class="fa fa-map-phone-alt me-3"></i>+251 977441166</p>
+        <p class="mb-2"><i class="fa fa-map-envelope me-3"></i>sura@gmail.com</p>
+        <div class="d-flex pt-2">
+          <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-twitter"></i></a>
+          <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-facebook"></i></a>
+          <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-youtube"></i></a>
+          <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-instagram"></i></a>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-6">
+        <h4 class="text-white mb-3">Gallary</h4>
+        <div class="row g-2 pt-2">
+          <div class="col-4">
+            <img class="img-fluid bg-light p-1" src="" alt="">
+          </div>
+          <div class="col-4">
+            <img class="img-fluid bg-light p-1" src="" alt="">
+          </div>
+          <div class="col-4">
+            <img class="img-fluid bg-light p-1" src="" alt="">
+          </div>
+          <div class="col-4">
+            <img class="img-fluid bg-light p-1" src="" alt="">
+          </div>
+          <div class="col-4">
+            <img class="img-fluid bg-light p-1" src="" alt="">
+          </div>
+          <div class="col-4">
+            <img class="img-fluid bg-light p-1" src="" alt="">
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-6">
+        <h4 class="text-white mb-3">Newsletter</h4>
+        <p>Dolor amet sit justo amet elitr clita ipsum elitr est.</p>
+        <div class="position-relative mx-auto" style="max-width: 400px;">
+          <input class="form-control border-0 w-100 py-3 ps-4 pe-5" type="text" placeholder="your email">
+          <button type="button" class="btn btn-primary py-2 position-absolute top-0 end-0 mt-2 me-2">sign up</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <div class="container">
+    <div class="copyright">
+      <div class="row">
+        <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+          &copy; <a class="border-botton" href="#">DGS</a>, All Right reserved.
+          <!--/*** This template is free as long as you keep the footer author's credit link/attribution link/backlink. If you'd like to use the template without the footer author's credit link/attribute link/backlink, you can purchase the credit Removal License from "http//htmlcodex.com/credit-removal".Thank you for your support.***/-->
+          Designed By<a class="border-bottom" href="">sura</a><br><br>
+          
+        </div>
+        <div class="col-md-6 text-center text-md-end">
+          <div class="footer-menu">
+            <a href="">Home</a>
+            <a href="">about</a>
+            <a href="">course</a>
+            <a href="">contact</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Footer End -->
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+  const toggleBtn = document.getElementById("darkModeToggle");
+  const body = document.body;
+
+  // Load saved mode
+  if (localStorage.getItem("darkMode") === "enabled") {
+    body.classList.add("dark-mode");
+    toggleBtn.innerHTML = "☀️ Light Mode";
+  }
+
+  toggleBtn.addEventListener("click", () => {
+    body.classList.toggle("dark-mode");
+
+    if (body.classList.contains("dark-mode")) {
+      localStorage.setItem("darkMode", "enabled");
+      toggleBtn.innerHTML = "☀️ Light Mode";
+    } else {
+      localStorage.setItem("darkMode", "disabled");
+      toggleBtn.innerHTML = "🌙 Dark Mode";
+    }
+  });
+</script>
+<script>
+const enrollButtons = document.querySelectorAll(".enrollBtn");
+const selectedCourseInput = document.getElementById("selectedCourse");
+const form = document.getElementById("enrollForm");
+
+let redirectPage = "./wdd.html";
+
+// When button is clicked
+enrollButtons.forEach(button => {
+  button.addEventListener("click", () => {
+    selectedCourseInput.value = button.getAttribute("data-course");
+    redirectPage = button.getAttribute("data-link");
+  });
+});
+
+// When form is submitted
+form.addEventListener("submit", function(e) {
+  e.preventDefault(); // stop page reload
+
+  const name = form.fullName.value;
+  const email = form.email.value;
+  const course = form.course.value;
+
+  alert("✅ " + name +
+        "\n📧 " + email +
+        "\n📚 Course: " + course +
+        "\n\nበትክክል ተመዝግበዋል!");
+
+  form.reset();
+
+  // Redirect after 2 seconds
+  setTimeout(() => {
+    window.location.href = redirectPage;
+  }, 2000);
+});
+</script>
+<script>
+
+window.addEventListener("scroll",function(){
+
+const hero=document.querySelector(".hero-image");
+
+let scroll=window.scrollY;
+
+hero.style.backgroundPositionY=scroll*0.4+"px";
+
+});
+
+</script>
+</body>
+</html>

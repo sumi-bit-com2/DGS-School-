@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>DIL BER Secondary School</title>
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
+<style>
+/* GENERAL */
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.navbar {
+  transition: 0.3s;
+}
+
+.navbar.scrolled {
+  background: #0d6efd;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+.hero-image {
+  height: 70vh;
+  background:
+    linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("course_4.jpg") center/cover no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+}
+
+.hero-overlay{
+position:absolute;
+width:100%;
+height:100%;
+background:rgba(0,0,0,0.5);
+display:flex;
+align-items:center;
+justify-content:center;
+text-align:center;
+color:white;
+}
+/* COUNTERS */
+
+.counter-section {
+  background: #f8f9fa;
+}
+
+.counter {
+  font-size: 40px;
+  font-weight: bold;
+  color: #0d6efd;
+}
+/* TEACHER */
+
+.teacher-card img {
+  height: 250px;
+  object-fit: cover;
+}
+
+.teacher-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+/* TIMELINE */
+
+.timeline{
+position:relative;
+padding:50px 0;
+}
+
+.timeline::before{
+content:"";
+position:absolute;
+left:50%;
+width:4px;
+height:100%;
+background:#0d6efd;
+}
+.timeline-item {
+  width: 50%;
+  padding: 20px 40px;
+  position: relative;
+}
+
+.timeline-item.left {
+  left: 0;
+}
+
+.timeline-item.right {
+  left: 50%;
+}
+.timeline-item::before{
+content:"";
+position:absolute;
+top:20px;
+right:-10px;
+width:20px;
+height:20px;
+background:#0d6efd;
+border-radius:50%;
+}
+
+.timeline-item.right::before{
+left:-10px;
+}
+
+/* GALLERY */
+
+.gallery img{
+transition:0.3s;
+}
+
+.gallery img:hover{
+transform:scale(1.05);
+}
+
+/* ACHIEVEMENT */
+
+.achievement{
+background:linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),
+url("https://picsum.photos/1600/900?school") center/cover;
+color:white;
+}
+
+/* TESTIMONIAL */
+
+.testimonial{
+background:#f8f9fa;
+}
+
+.testimonial-card{
+background:white;
+padding:30px;
+border-radius:10px;
+box-shadow:0 5px 20px rgba(0,0,0,0.1);
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+
+<nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+<div class="container">
+
+<a class="navbar-brand d-flex align-items-center" href="#">
+<img src="dgs3.svg" height="60">
+<span class="ms-2 fw-bold">DIL BER Secondary School</span>
+</a>
+
+<button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#nav">
+<span class="navbar-toggler-icon"></span>
+</button>
+
+<div class="collapse navbar-collapse" id="nav">
+<ul class="navbar-nav ms-auto">
+
+<li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+<li class="nav-item"><a class="nav-link active">About</a></li>
+<li class="nav-item"><a class="nav-link" href="courses.html">Courses</a></li>
+<li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+
+</ul>
+</div>
+
+</div>
+</nav>
+
+<section class="hero-image">
+  
+  <div class="hero-overlay">
+    <div>
+      <h1 class="display-4 fw-bold">About Our School</h1>
+      <p class="lead">Educating Future Leaders Since 2001</p>
+    </div>
+  </div>
+  
+</section>
+
+<!-- COUNTERS -->
+
+<section class="counter-section py-5 text-center">
+
+<div class="container">
+<div class="row">
+
+<div class="col-md-3">
+<h2 class="counter" data-target="1200">0</h2>
+<p>Students</p>
+</div>
+
+<div class="col-md-3">
+<h2 class="counter" data-target="80">0</h2>
+<p>Teachers</p>
+</div>
+
+<div class="col-md-3">
+<h2 class="counter" data-target="20">0</h2>
+<p>Years Experience</p>
+</div>
+
+<div class="col-md-3">
+<h2 class="counter" data-target="25">0</h2>
+<p>Courses</p>
+</div>
+
+</div>
+</div>
+
+</section>
+
+<!-- SCHOOL TIMELINE -->
+
+<section class="timeline container">
+
+<h2 class="text-center mb-5">School History</h2>
+
+<div class="timeline-item left" data-aos="fade-right">
+<h4>2001</h4>
+<p>School founded with 50 students.</p>
+</div>
+
+<div class="timeline-item right" data-aos="fade-left">
+<h4>2008</h4>
+<p>New science laboratory built.</p>
+</div>
+
+<div class="timeline-item left" data-aos="fade-right">
+<h4>2015</h4>
+<p>Won national education award.</p>
+</div>
+
+<div class="timeline-item right" data-aos="fade-left">
+<h4>2024</h4>
+<p>Expanded digital learning program.</p>
+</div>
+
+</section>
+
+<!-- TEACHERS -->
+
+<section class="container my-5">
+
+<h2 class="text-center mb-5">Our Teachers</h2>
+
+<div class="row g-4">
+
+<div class="col-md-4">
+<div class="card teacher-card text-center">
+<img src="https://randomuser.me/api/portraits/men/32.jpg">
+<div class="card-body">
+<h5>Mr Daniel</h5>
+<p>Mathematics</p>
+</div>
+</div>
+</div>
+
+<div class="col-md-4">
+<div class="card teacher-card text-center">
+<img src="https://randomuser.me/api/portraits/women/44.jpg">
+<div class="card-body">
+<h5>Mrs Sara</h5>
+<p>Science</p>
+</div>
+</div>
+</div>
+
+<div class="col-md-4">
+<div class="card teacher-card text-center">
+<img src="https://randomuser.me/api/portraits/men/65.jpg">
+<div class="card-body">
+<h5>Mr Michael</h5>
+<p>English</p>
+</div>
+</div>
+</div>
+
+</div>
+
+</section>
+
+<!-- GALLERY -->
+
+<section class="container gallery my-5">
+
+<h2 class="text-center mb-5">Campus Gallery</h2>
+
+<div class="row g-3">
+
+<div class="col-md-4">
+<img src="https://picsum.photos/500/400?school" class="img-fluid rounded shadow">
+</div>
+
+<div class="col-md-4">
+<img src="https://picsum.photos/500/400?students" class="img-fluid rounded shadow">
+</div>
+
+<div class="col-md-4">
+<img src="https://picsum.photos/500/400?classroom" class="img-fluid rounded shadow">
+</div>
+
+</div>
+
+</section>
+
+<!-- ACHIEVEMENTS -->
+
+<section class="achievement py-5 text-center">
+
+<div class="container">
+
+<h2 class="mb-4">Achievements</h2>
+
+<div class="row">
+
+<div class="col-md-4">
+<h3>🏆</h3>
+<p>Best School Award</p>
+</div>
+
+<div class="col-md-4">
+<h3>🎓</h3>
+<p>100% Graduation Rate</p>
+</div>
+
+<div class="col-md-4">
+<h3>⚽</h3>
+<p>Regional Sports Champions</p>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- TESTIMONIAL -->
+
+<section class="testimonial py-5">
+
+<div class="container">
+
+<h2 class="text-center mb-5">Student Testimonials</h2>
+
+<div id="testimonialCarousel" class="carousel slide" data-bs-ride="carousel">
+
+<div class="carousel-inner">
+
+<div class="carousel-item active">
+<div class="testimonial-card text-center">
+<p>"This school helped me achieve my dreams."</p>
+<h5>Abel</h5>
+</div>
+</div>
+
+<div class="carousel-item">
+<div class="testimonial-card text-center">
+<p>"Great teachers and environment."</p>
+<h5>Selam</h5>
+</div>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+<!-- FOOTER Start -->
+<div class="container-fluid bg-dark text-light footrer pt-5  mt-5 wow fadeIn" data-wow-delay="0.1s">
+  <div class="container py-5">
+    <div class="row g-5">
+      <div class="col-lg-3 col-md-6">
+        <h4 class="text-white mb-3">Quick Link</h4>
+        <a class="btn btn-link" href="">Privacy policy</a>
+        <a class="btn btn-link" href="about.html">About</a>
+        <a class="btn btn-link" href="courses.html">courses</a>
+        <a class="btn btn-link" href="contact.html">contact</a>
+        <a class="btn btn-link" href="">FAQs & Helps</a>
+      </div>
+      <div class="col-lg-3 col-md-6">
+        <h4 class="text-white mb-3">Contact</h4>
+        <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>123 stress, New york, USA</p>
+        <p class="mb-2"><i class="fa fa-map-phone-alt me-3"></i>+251 977441166</p>
+        <p class="mb-2"><i class="fa fa-map-envelope me-3"></i>sura@gmail.com</p>
+        <div class="d-flex pt-2">
+          <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-twitter"></i></a>
+          <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-facebook"></i></a>
+          <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-youtube"></i></a>
+          <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-instagram"></i></a>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-6">
+        <h4 class="text-white mb-3">Gallary</h4>
+        <div class="row g-2 pt-2">
+          <div class="col-4">
+            <img class="img-fluid bg-light p-1" src="" alt="">
+          </div>
+          <div class="col-4">
+            <img class="img-fluid bg-light p-1" src="" alt="">
+          </div>
+          <div class="col-4">
+            <img class="img-fluid bg-light p-1" src="" alt="">
+          </div>
+          <div class="col-4">
+            <img class="img-fluid bg-light p-1" src="" alt="">
+          </div>
+          <div class="col-4">
+            <img class="img-fluid bg-light p-1" src="" alt="">
+          </div>
+          <div class="col-4">
+            <img class="img-fluid bg-light p-1" src="" alt="">
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-6">
+        <h4 class="text-white mb-3">Newsletter</h4>
+        <p>Dolor amet sit justo amet elitr clita ipsum elitr est.</p>
+        <div class="position-relative mx-auto" style="max-width: 400px;">
+          <input class="form-control border-0 w-100 py-3 ps-4 pe-5" type="text" placeholder="your email">
+          <button type="button" class="btn btn-primary py-2 position-absolute top-0 end-0 mt-2 me-2">sign up</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <div class="container">
+    <div class="copyright">
+      <div class="row">
+        <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+          &copy; <a class="border-botton" href="#">DGS</a>, All Right reserved.
+          <!--/*** This template is free as long as you keep the footer author's credit link/attribution link/backlink. If you'd like to use the template without the footer author's credit link/attribute link/backlink, you can purchase the credit Removal License from "http//htmlcodex.com/credit-removal".Thank you for your support.***/-->
+          Designed By<a class="border-bottom" href="">sura</a><br><br>
+            
+        </div>
+        <div class="col-md-6 text-center text-md-end">
+          <div class="footer-menu">
+            <a href="">Home</a>
+            <a href="">about</a>
+            <a href="">course</a>
+            <a href="">contact</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Footer End -->
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+
+<script>
+
+AOS.init();
+
+window.addEventListener("scroll",function(){
+document.querySelector(".navbar").classList.toggle("scrolled",window.scrollY>50)
+})
+
+const counters=document.querySelectorAll(".counter");
+
+counters.forEach(counter=>{
+const update=()=>{
+const target=+counter.getAttribute("data-target");
+const count=+counter.innerText;
+const inc=target/100;
+
+if(count<target){
+counter.innerText=Math.ceil(count+inc);
+setTimeout(update,30);
+}else{
+counter.innerText=target;
+}
+}
+update();
+});
+
+</script>
+
+</body>
+</html>
